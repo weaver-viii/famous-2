@@ -1,7 +1,5 @@
-famous
+Widgets, Views, &amp; Tools for Famo.us
 ======
-
-#Widgets, Views, &amp; Tools for Famo.us
 
 
 
