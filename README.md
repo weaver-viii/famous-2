@@ -10,7 +10,7 @@ A pull to refresh scrollview. I tried to give the user as many options as possib
 Thanks to John Traver for the basics.
 http://stackoverflow.com/questions/24527713/scrollview-pull-to-refresh-famo-us/24567079#24567079
 
-##PageSwipe: (NOT DONE REFACTORING)
+##PageSwiper: (NOT DONE REFACTORING)
 
 This works wonderful inside a current project. We are currently refactoring it into a reusable view. Hopefully it will be ready in a day or so as we have time.
 
