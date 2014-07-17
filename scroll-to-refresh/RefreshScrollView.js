@@ -1,20 +1,19 @@
 define(function(require, exports, module) {
-	var ScrollView = require('famous/views/Scrollview');
-	var Timer = require('famous/utilities/Timer');
-	var Transitionable  = require('famous/transitions/Transitionable');
-	var StateModifier = require('famous/modifiers/StateModifier');
-	var Surface = require('famous/core/Surface');
+    var ScrollView = require('famous/views/Scrollview');
+    var Transitionable  = require('famous/transitions/Transitionable');
+    var StateModifier = require('famous/modifiers/StateModifier');
+    var Surface = require('famous/core/Surface');
     var ImageSurface = require('famous/surfaces/ImageSurface');
-	var Transform = require('famous/core/Transform');
+    var Transform = require('famous/core/Transform');
     var SnapTransition  = require('famous/transitions/SnapTransition');
     var OptionsManager = require('famous/core/OptionsManager');
 
- 	Transitionable.registerMethod('snap',SnapTransition);
+    Transitionable.registerMethod('snap',SnapTransition);
 
     var snap = { method:'snap', period:200, dampingRatio:0.6 }
 
-	function RefreshScrollView(options, callback) {
-		ScrollView.apply(this, arguments);
+    function RefreshScrollView(options, callback) {
+        ScrollView.apply(this, arguments);
 
         this.options = Object.create(RefreshScrollView.DEFAULT_OPTIONS);
         this.optionsManager = new OptionsManager(this.options);
@@ -27,11 +26,11 @@ define(function(require, exports, module) {
         _refreshCallback = callback;
 
         this.clipSize = this.options.height;
-		_createControls.call(this);
-	};
+        _createControls.call(this);
+    };
 
-	RefreshScrollView.prototype = Object.create(ScrollView.prototype);
-	RefreshScrollView.prototype.constructor = RefreshScrollView;
+    RefreshScrollView.prototype = Object.create(ScrollView.prototype);
+    RefreshScrollView.prototype.constructor = RefreshScrollView;
 
     var _refreshCallback;
 
@@ -54,7 +53,7 @@ define(function(require, exports, module) {
         releaseRefreshClasses: ['releaseRefreshProp'],//Classes for when release text is visible.
     };
 
-	function _createControls() {
+    function _createControls() {
 
         var refresh = 'Refreshing...';
 
@@ -71,10 +70,10 @@ define(function(require, exports, module) {
         }.bind(this));
 
         var refreshInit = function() {
-        	_refreshCallback(resetRefresh);
+            _refreshCallback(resetRefresh);
         }.bind(this);
         var resetRefresh = function() {
-        	this.trans.halt();
+            this.trans.halt();
             opacityMod.setOpacity(0);
             pullRefresh.setContent(this.options.pullDownText);
             pullRefresh.setClasses(this.options.pullRefreshClasses);
@@ -175,7 +174,7 @@ define(function(require, exports, module) {
             }
 
         }.bind(this));
-	}
+    }
 
-	module.exports = RefreshScrollView;
+    module.exports = RefreshScrollView;
 });
