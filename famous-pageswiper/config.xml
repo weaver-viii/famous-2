@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.vizidrix.famous-sideswipe" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Vizidrix | Famo.us - PageSwiper</name>
+    <description>
+        A simple Cordova example of a swipe to navigate pages using Famo.us
+    </description>
+    <author email="admin@vizidrix.com" href="http://vizidrix.com">
+        Vizidrix Administrator
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
